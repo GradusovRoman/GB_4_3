@@ -4,6 +4,7 @@ import com.geekbrains.ru.springlesson3.domain.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+
 @Controller
 @RequestMapping("/main")
 public class MainController {
