@@ -2,22 +2,22 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <body>
-<img th:src="@{/img/header.png}" alt="header" width="100%" />
+<img th:src="@{/img/header.png}" alt="header" width="100%"/>
 <h1>Market place</h1>
 <br/>
 <table cellspacing="2" border="1" cellpadding="5" width="600">
     <thead>
     <tr>
-        <th> Id </th>
-        <th> Product </th>
-        <th> Price </th>
+        <th> Id</th>
+        <th> Product</th>
+        <th> Price</th>
     </tr>
     </thead>
     <tbody>
     <tr th:if="${products.isEmpty()}">
-        <td colspan="2"> No product in the store </td>
+        <td colspan="2"> No product in the store</td>
     </tr>
-    <form action="#" id="1" th:action="@{/product}"  method="get">
+    <form action="#" id="1" th:action="@{/product}" method="get">
         <tr th:each="product : ${products}">
             <td><span th:text="${product.id}"> Id </span></td>
             <td><span th:text="${product.name}"> Product </span></td>
@@ -28,11 +28,11 @@
 </table>
 <a href="/add">Добавить новый продукт>>></a>
 <br>
-<h2 >Find by Id</h2>
-<form  action="#" th:action="@{/product}"  method="post">
+<h2>Find by Id</h2>
+<form action="#" th:action="@{/product}" method="post">
     <p>Id: <input type="text"/></p>
     <!-- пока не реализовано  -->
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
 
 </form>
 </body>
